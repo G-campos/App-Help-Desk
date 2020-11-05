@@ -46,11 +46,7 @@
                 <form method="post" action="registra_chamado.php">
                   <div class="form-group">
                     <label>Título</label>
-<<<<<<< HEAD
                     <input name="titulo" type="text" class="form-control" placeholder="Título" autofocus>
-=======
-                    <input name="titulo" type="text" class="form-control" placeholder="Título">
->>>>>>> 0792a0145605f2a116a64c882d8e0550b0f51fc2
                   </div>
 
                   <div class="form-group">

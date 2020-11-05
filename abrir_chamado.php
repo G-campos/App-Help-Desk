@@ -46,7 +46,7 @@
                 <form method="post" action="registra_chamado.php">
                   <div class="form-group">
                     <label>Título</label>
-                    <input name="titulo" type="text" class="form-control" placeholder="Título">
+                    <input name="titulo" type="text" class="form-control" placeholder="Título" autofocus>
                   </div>
 
                   <div class="form-group">
@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="col-6">
-                      <button class="btn btn-lg btn-info btn-block" type="submit">Abrir</button>
+                      <button class="btn btn-lg btn-info btn-block" type="submit">Enviar</button>
                     </div>
                   </div>
                 </form>

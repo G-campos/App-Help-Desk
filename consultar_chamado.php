@@ -1,5 +1,5 @@
-<?php require_once "validador_acesso.php" ?>
-<?php
+<?php 
+  require_once "validador_acesso.php";
   //array de chamados
 
   $chamados = array();
@@ -11,7 +11,23 @@
   while(!feof($arquivo)){ //testa pelo fim do arquivo
     //linhas
     $registro = fgets($arquivo);//recupera a linha
-    $chamados[] = $registro;
+
+    //explode os detalhes do registro para verificar o id do usuario responsavel pelo cadastro
+    $registro_detalhes = explode('#', $registro);
+
+    //(perfil_id = 2) só vamos exibir o chamado se ele for criado pelo usuario
+    if ($_SESSION['perfil_id'] == 2) {
+      //se usuario autenticado nao for o usuario de abertura do chamado, entao ele nao faz nada
+      if ($_SESSION['id'] != $registro_detalhes[0]) {
+        continue; //nao faz nada
+      } else {
+        $chamados[] = $registro;// adiciona o registro do arquivo ao array $chamados
+      }
+
+    } else {
+      $chamados[] = $registro;
+    }
+
 
   }
 
@@ -65,12 +81,6 @@
 
               <?php
                   $chamado_dados = explode('#', $chamado);
-
-                  if ($_SESSION['perfil_id'] == 2) {
-                    if ($_SESSION['id'] != $chamado_dados[0]) {
-                      continue;
-                    }
-                  }
 
                   if(count($chamado_dados) < 3){
                     continue;

@@ -1,5 +1,9 @@
 <?php require_once "validador_acesso.php" ?>
+<<<<<<< HEAD
 <?php
+=======
+<?
+>>>>>>> 0792a0145605f2a116a64c882d8e0550b0f51fc2
 
   //array de chamados
 
@@ -15,6 +19,12 @@
     $chamados[] = $registro;
 
   }
+<<<<<<< HEAD
+=======
+    echo "<pre>";
+    echo $arquivo;
+    echo "</pre>";
+>>>>>>> 0792a0145605f2a116a64c882d8e0550b0f51fc2
 
   //fechando o arquivo.hd
   fclose($arquivo);
@@ -63,6 +73,7 @@
 
           <div class="card-body">
 
+<<<<<<< HEAD
             <?php foreach($chamados as $chamado){ ?>
 
               <?php
@@ -84,9 +95,29 @@
                   <h6 class="card-subtitle mb-2 text-muted"><?= $chamado_dados[2] ?></h6>
                   <p class="card-text"><?= $chamado_dados[3] ?></p>
                 </div>
+=======
+            <? foreach($chamados as $chamado){ ?>
+
+            <?
+                $chamado_dados = explode('#', $chamado);
+
+                if(count($chamado_dados) < 3){
+                  continue;
+                }
+              ?>
+            <div class="card mb-3 bg-light">
+              <div class="card-body">
+                <h5 class="card-title">Titulo</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
+                <p class="card-text">Descrição do chamado...</p>
+>>>>>>> 0792a0145605f2a116a64c882d8e0550b0f51fc2
               </div>
 
+<<<<<<< HEAD
             <?php } ?>
+=======
+            <? } ?>
+>>>>>>> 0792a0145605f2a116a64c882d8e0550b0f51fc2
             <div class="row mt-5">
               <div class="col-6">
                 <a class="btn btn-lg btn-warning btn-block" href="home.php">Voltar</a>

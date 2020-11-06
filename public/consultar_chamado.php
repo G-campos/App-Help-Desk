@@ -1,11 +1,11 @@
 <?php 
-  require_once "validador_acesso.php";
+  require_once "../validador_acesso.php";
   //array de chamados
 
   $chamados = array();
   //http://php.net/manual/pt_BR/function.fopen.php
   //abrir arquivo.hd
-  $arquivo = fopen('arquivo.hd','r');
+  $arquivo = fopen('../arquivo.hd','r');
 
   //enquato houverem registros (linhas) a serem recuperados
   while(!feof($arquivo)){ //testa pelo fim do arquivo
@@ -62,7 +62,7 @@
     </a>
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a href="logoff.php" class="nav-link">SAIR</a>
+        <a href="../logoff.php" class="nav-link">SAIR</a>
       </li>
     </ul>
   </nav>

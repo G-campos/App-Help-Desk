@@ -26,4 +26,4 @@ session_start();
 // echo "</pre>";
 
 session_destroy();
-header('Location: index.php');
+header('Location: /public/index.php');

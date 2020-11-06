@@ -1,6 +1,7 @@
 <?php
   session_start();
+  define('__APP_ROOT__', dirname(__DIR__));
   
   if(!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM'){
-    header('Location: /public/index.php?login=erro2');
+    header('Location: ' . __APP_ROOT__ . '/public/index.php?login=erro2');
   }

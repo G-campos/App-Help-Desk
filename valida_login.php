@@ -1,5 +1,7 @@
 <?php
 session_start();
+define('__APP_ROOT__', dirname(__DIR__));
+
 //variavel que verifica se a autenticacao foi realizada
 $usuarios_autenticado = false;
 $usuario_id = null;
@@ -28,9 +30,9 @@ if($usuarios_autenticado){
     $_SESSION['autenticado'] = 'SIM';
     $_SESSION['id'] = $usuario_id;
     $_SESSION['perfil_id'] = $usuario_perfil_id;
-    header('Location: /public/home.php');
+    header('Location: ' . __APP_ROOT__ . '/public/home.php');
 
 } else {
     $_SESSION['autenticado'] = 'NAO';
-    header('Location: public/index.php?login=erro');
+    header('Location: ' . __APP_ROOT__ . '/public/index.php?login=erro');
 }

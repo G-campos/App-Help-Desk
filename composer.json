@@ -1,0 +1,12 @@
+{
+    "name": "campos/app-help-desk",
+    "require": {
+        "composer/composer": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "kontrolbits",
+            "email": "gabodecampos@gmail.com"
+        }
+    ]
+}
